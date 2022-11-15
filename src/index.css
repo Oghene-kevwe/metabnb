@@ -1,17 +1,351 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primaryColor: #a02279;
+}
+
+/* NAVBAR */
+nav {
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+.logo-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 10rem;
+}
+.menu-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+}
+.links {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  font-size: 1.25rem;
+}
+.connectWallet {
+  height: 3rem;
+  width: 10.6rem;
+  background: var(--primaryColor);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.connectWallet a {
+  color: white;
+}
+
+/* MAIN */
+.header-content {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.rent {
+  font-size: 3.5rem;
+  line-height: 140%;
+}
+.rent span {
+  color: var(--primaryColor);
+}
+
+.header-content {
+  margin-bottom: 5rem;
+}
+
+.header-content p:nth-child(2) {
+  font-size: 1.5rem;
+  line-height: 2.87rem;
+}
+
+form {
+  margin-top: 3rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-container input {
+  background: rgba(247, 247, 247, 0.1);
+  border: 1px solid #a3a3a3;
+  border-radius: 8px 0px 0px 8px;
+  width: 24.4rem;
+  height: 3.4rem;
+  padding-left: 1rem;
+}
+
+.form-container span {
+  width: 14.4rem;
+  height: 3.4rem;
+  background: var(--primaryColor);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0px 8px 8px 0px;
+}
+
+::placeholder {
+  font-size: 0.87rem;
+}
+
+.header-image {
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+}
+
+.header-image img {
+  width: 70%;
+}
+
+.header-bar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--primaryColor);
+  row-gap: 1rem;
+  display: grid;
+  place-items: center;
+}
+.header-bar img {
+  width: 11.2rem;
+}
+
+main > section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.inspiration {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.8rem;
+  margin-bottom: 3rem;
+}
+
+.nftHotel-container {
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nftHotel {
+  border: 1px solid #d7d7d7;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.nftHotel > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 1rem;
+  text-transform: capitalize;
+}
+
+.nftHotel > div > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.nftHotel-img {
+  width: 70%;
+}
+
+.purple {
+  background: var(--primaryColor);
+  color: white;
+}
+.purple h2 {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  margin-bottom: 2rem;
+}
+
+.purple p {
+  line-height: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.purple button {
+  height: 3rem;
+  width: 9.75rem;
+  border-radius: 8px;
+  color: var(--primaryColor);
+  border: none;
+  text-transform: capitalize;
+}
+
+.purple img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.footer-content-container h2 {
+  margin-bottom: 0.8rem;
+}
+
+.footer-content-container p {
+  margin-bottom: 0.5rem;
+}
+.socials {
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.socials-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nftHotel-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .socials-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .socials {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+  }
+
+  .logo img {
+    width: 12.5rem;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+  .nftHotel-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .links-container {
+    height: auto !important;
+    width: 70%;
+  }
+  .links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .connectWallet {
+    margin-top: 0;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-content {
+    width: 60%;
+  }
+
+  .header-image {
+    width: 80%;
+  }
+
+  .rent {
+    margin-bottom: 2rem;
+  }
+
+  .purple {
+    display: flex;
+    align-items: center;
+  }
+  .purple-content {
+    margin-top: 4rem;
+  }
+  .purple-content p {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+  .purple-img {
+    width: 100%;
+  }
 }

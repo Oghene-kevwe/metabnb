@@ -1,20 +1,16 @@
-import { useEffect, useRef } from "react"
-
-export const App = () =>{
-    const testRef = useRef(null)
-    useEffect(()=>{
-        testRef.current.style.color = 'red'
-        console.log(testRef.current.style);
-    })
-    return (
-        <h1 className="text-3xl font-bold underline" ref={testRef}>
-          Hello world!
-        </h1>
-      )
-}
-
-
-
+import { Homepage } from "./pages/Homepage";
+import { PlacesToStay } from "./pages/places-to-stay";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Footer } from "./components/footer";
+export const App = () => {
+  return <BrowserRouter>
+  <Routes>
+    <Route path='/' element = {<Homepage/>}/>
+        <Route path='places-to-stay' element={<PlacesToStay/>}/>
+  </Routes>
+  <Footer/>
+  </BrowserRouter>;
+};
 
 
 
