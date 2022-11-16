@@ -171,7 +171,7 @@ export const PlacesToStay = ()=>{
                   <p>{distance}</p>
                   <p>{duration}</p>
                 </div>
-                <img src={star} alt={name} />
+                <img src={star} alt={name} className='star' />
                 </div>
               </div>
             );
